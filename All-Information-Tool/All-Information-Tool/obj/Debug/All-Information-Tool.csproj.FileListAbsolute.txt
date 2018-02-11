@@ -1,0 +1,12 @@
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\All-Information-Tool.exe.config
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\All-Information-Tool.exe
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\All-Information-Tool.pdb
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\Newtonsoft.Json.dll
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\Newtonsoft.Json.xml
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.csprojResolveAssemblyReference.cache
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All_Information_Tool.Form1.resources
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All_Information_Tool.Properties.Resources.resources
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.csproj.GenerateResource.Cache
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.csproj.CoreCompileInputs.cache
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.exe
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.pdb
