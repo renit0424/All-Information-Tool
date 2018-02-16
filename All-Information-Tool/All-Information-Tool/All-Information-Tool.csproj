@@ -61,19 +61,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -84,31 +84,118 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170124.png" />
+    <Folder Include="All_Information_Tool\Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170139.png" />
+    <None Include="Resources\_010701sonota107-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170144.png" />
+    <None Include="Resources\_010701sonota111-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170151.png" />
+    <None Include="Resources\_010701sonota115-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170157.png" />
+    <None Include="Resources\_010701sonota119-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170203.png" />
+    <None Include="Resources\_010701sonota127-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170209.png" />
+    <None Include="Resources\_010701sonota130-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170215.png" />
+    <None Include="Resources\_010701sonota133-trans.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sozai_cman_jp_20180211170221.png" />
+    <None Include="Resources\_010701sonota139-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota143-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota147-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota151-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota155-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota159-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota163-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota167-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota171-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota175-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota179-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota183-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota191-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota199-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota211-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota218-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota222-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota226-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota230-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota234-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota238-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota242-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota246-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota250-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota254-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota266-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota270-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota274-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota282-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_010701sonota287-trans.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

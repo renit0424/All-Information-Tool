@@ -63,9 +63,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170124 {
+        internal static System.Drawing.Bitmap _010701sonota107_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170124", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota107-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170139 {
+        internal static System.Drawing.Bitmap _010701sonota111_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170139", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota111-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170144 {
+        internal static System.Drawing.Bitmap _010701sonota115_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170144", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota115-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170151 {
+        internal static System.Drawing.Bitmap _010701sonota119_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170151", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota119-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170157 {
+        internal static System.Drawing.Bitmap _010701sonota127_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170157", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota127-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170203 {
+        internal static System.Drawing.Bitmap _010701sonota130_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170203", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota130-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170209 {
+        internal static System.Drawing.Bitmap _010701sonota133_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170209", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota133-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170215 {
+        internal static System.Drawing.Bitmap _010701sonota139_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170215", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota139-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,289 @@ namespace All_Information_Tool.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap sozai_cman_jp_20180211170221 {
+        internal static System.Drawing.Bitmap _010701sonota143_trans {
             get {
-                object obj = ResourceManager.GetObject("sozai_cman_jp_20180211170221", resourceCulture);
+                object obj = ResourceManager.GetObject("_010701sonota143-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota147_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota147-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota151_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota151-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota155_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota155-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota159_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota159-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota163_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota163-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota167_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota167-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota171_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota171-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota175_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota175-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota179_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota179-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota183_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota183-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota191_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota191-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota199_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota199-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota211_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota211-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota218_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota218-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota222_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota222-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota226_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota226-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota230_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota230-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota234_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota234-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota238_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota238-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota242_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota242-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota246_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota246-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota250_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota250-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota254_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota254-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota266_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota266-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota270_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota270-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota274_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota274-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota282_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota282-trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _010701sonota287_trans {
+            get {
+                object obj = ResourceManager.GetObject("_010701sonota287-trans", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
