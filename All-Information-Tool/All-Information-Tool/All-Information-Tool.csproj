@@ -197,5 +197,8 @@
   <ItemGroup>
     <None Include="Resources\_010701sonota287-trans.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ダウンロード.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

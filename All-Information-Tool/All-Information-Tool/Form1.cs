@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace All_Information_Tool
 {
@@ -20,6 +21,8 @@ namespace All_Information_Tool
         {
             InitializeComponent();
             timer1.Start();
+            ktimer1.Start();
+            ktimer2.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -229,12 +232,15 @@ namespace All_Information_Tool
         private void timer3_Tick(object sender, EventArgs e)
         {
             string json;
+            DateTime rttm = DateTime.Now;
+            string retime = rttm.ToString("yyyyMMddHHmmss");
             using (var wc = new System.Net.WebClient())
             {
                 wc.Encoding = System.Text.Encoding.UTF8;
-                json = wc.DownloadString("http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/20180105110259.json");
-                //↑のURL日付は現在のものにする
+                json = wc.DownloadString("http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/" + retime + ".json");
+                //json = wc.DownloadString("http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/20180105110259.json");
             }
+
 
             {
                 if (json.Contains("ありません")) //ここ追記
@@ -268,6 +274,48 @@ namespace All_Information_Tool
             //推定最大震度
             label9.Text = ($"推定震度 {jsonData.Calcintensity}");
 
+        }
+
+        private async void ktimer1_Tick(object sender, EventArgs e)
+        {
+            //地表加速度
+            try
+            {
+                DateTime dtNow = DateTime.Now;
+                DateTime time = DateTime.Now.AddSeconds(-3);
+                //-3＝PC時計から-3秒を取得する
+
+                string url = UrlGenerator.Generate(UrlType.RealTimeImg, time, RealTimeImgType.Pga);
+                Bitmap img = new Bitmap(new MemoryStream(await(new WebClient().DownloadDataTaskAsync(url))));
+
+                pictureBox3.ImageLocation = url;
+            }
+            catch
+            {
+                //失敗したときの処理
+                //例： MessageBox.Show("取得に失敗しました。");
+                //でも↑だと失敗した分出てくるからすごい数になりそう
+            }
+        }
+
+        private async void ktimer2_Tick(object sender, EventArgs e)
+        {
+            //地表震度
+            try
+            {
+                DateTime dtNow = DateTime.Now;
+                DateTime time = DateTime.Now.AddSeconds(-3);
+                //-3＝PC時計から-3秒を取得する
+
+                string url = UrlGenerator.Generate(UrlType.RealTimeImg, time, RealTimeImgType.Shindo);
+                Bitmap img = new Bitmap(new MemoryStream(await(new WebClient().DownloadDataTaskAsync(url))));
+
+                pictureBox4.ImageLocation = url;
+            }
+            catch
+            {
+                //取得error処理
+            }
         }
     }
 
@@ -391,6 +439,196 @@ namespace All_Information_Tool
             public string Hash { get; set; }
         }
     }
+    //ここから↓を変えると動かないかも
+    public enum RealTimeImgType
+    {
+        /// <summary>
+        /// 震度
+        /// </summary>
+        Shindo,
+
+        /// <summary>
+        /// 最大加速度
+        /// </summary>
+        Pga,
+
+        /// <summary>
+        /// 最大速度
+        /// </summary>
+        Pgv,
+
+        /// <summary>
+        /// 最大変位
+        /// </summary>
+        Pgd,
+
+        /// <summary>
+        /// 速度応答0.125Hz
+        /// </summary>
+        Response_0_125Hz,
+
+        /// <summary>
+        /// 速度応答0.25Hz
+        /// </summary>
+        Response_0_25Hz,
+
+        /// <summary>
+        /// 速度応答0.5Hz
+        /// </summary>
+        Response_0_5Hz,
+
+        /// <summary>
+        /// 速度応答1Hz
+        /// </summary>
+        Response_1Hz,
+
+        /// <summary>
+        /// 速度応答2Hz
+        /// </summary>
+        Response_2Hz,
+
+        /// <summary>
+        /// 速度応答4Hz
+        /// </summary>
+        Response_4Hz,
+    }
+
+    /// <summary>
+    /// RealTimeImgTypeの拡張メソッド
+    /// </summary>
+    public static class RealTimeImgTimeExtensions
+    {
+        /// <summary>
+        /// URLに使用する文字列に変換する
+        /// </summary>
+        /// <param name="type">変換するRealTimeImgTypy</param>
+        /// <returns>変換された文字列</returns>
+        public static string ToUrlString(this RealTimeImgType type)
+        {
+            switch (type)
+            {
+                case RealTimeImgType.Shindo:
+                    return "jma";
+
+                case RealTimeImgType.Pga:
+                    return "acmap";
+
+                case RealTimeImgType.Pgv:
+                    return "vcmap";
+
+                case RealTimeImgType.Pgd:
+                    return "dcmap";
+
+                case RealTimeImgType.Response_0_125Hz:
+                    return "rsp0125";
+
+                case RealTimeImgType.Response_0_25Hz:
+                    return "rsp0250";
+
+                case RealTimeImgType.Response_0_5Hz:
+                    return "rsp0500";
+
+                case RealTimeImgType.Response_1Hz:
+                    return "rsp1000";
+
+                case RealTimeImgType.Response_2Hz:
+                    return "rsp2000";
+
+                case RealTimeImgType.Response_4Hz:
+                    return "rsp4000";
+            }
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// 新強震モニタのURL生成器
+    /// </summary>
+    public static class UrlGenerator
+    {
+        /// <summary>
+        /// JsonEewのベースURL
+        /// <para>0:時間</para>
+        /// </summary>
+        public static string JsonEewBase = "http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/{0}.json";
+
+        /// <summary>
+        /// PsWaveImgのベースURL
+        /// <para>0:日付</para>
+        /// <para>1:時間</para>
+        /// </summary>
+        public static string PsWaveBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/PSWaveImg/eew/{0}/{1}.eew.gif";
+
+        /// <summary>
+        /// RealTimeImgのベースURL
+        /// <para>0:タイプ</para>
+        /// <para>1:地上(s)/地下(b)</para>
+        /// <para>2:日付</para>
+        /// <para>3:時間</para>
+        /// </summary>
+        public static string RealTimeBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/RealTimeImg/{0}_{1}/{2}/{3}.{0}_{1}.gif";
+
+        /// <summary>
+        /// 予想震度のベースURL
+        /// <para>0:日付</para>
+        /// <para>1:時間</para>
+        /// </summary>
+        public static string EstShindoBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/EstShindoImg/eew/{0}/{1}.eew.gif";
+
+        /// <summary>
+        /// 与えられた値を使用してURLを生成します。
+        /// </summary>
+        /// <param name="urlType">生成するURLのタイプ</param>
+        /// <param name="datetime">生成するURLの時間</param>
+        /// <param name="realTimeShindoType">(UrlType=RealTimeImgの際に使用)取得するリアルタイム情報の種類</param>
+        /// <param name="isBerehole">(UrlType=RealTimeImgの際に使用)地中の情報を取得するかどうか</param>
+        /// <returns></returns>
+        public static string Generate(UrlType urlType, DateTime datetime,
+            RealTimeImgType realTimeShindoType = RealTimeImgType.Shindo, bool isBerehole = false)
+        {
+            switch (urlType)
+            {
+                case UrlType.RealTimeImg:
+                    return string.Format(RealTimeBase, realTimeShindoType.ToUrlString(), isBerehole ? "b" : "s", datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
+
+                case UrlType.RestShindo:
+                    return string.Format(EstShindoBase, datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
+
+                case UrlType.PSWave:
+                    return string.Format(PsWaveBase, datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
+
+                case UrlType.EewJson:
+                    return string.Format(JsonEewBase, datetime.ToString("yyyyMMddHHmmss"));
+            }
+            return null;
+        }
+    }
 
 
+    /// <summary>
+    /// 生成するURLの種類
+    /// </summary>
+    public enum UrlType
+    {
+        /// <summary>
+        /// リアルタイム情報
+        /// <para>震度、加速度など</para>
+        /// </summary>
+        RealTimeImg = 0,
+
+        /// <summary>
+        /// 到達予想震度
+        /// </summary>
+        RestShindo,
+
+        /// <summary>
+        /// P波、S波到達予想円
+        /// </summary>
+        PSWave,
+
+        /// <summary>
+        /// 緊急地震速報のJson
+        /// </summary>
+        EewJson,
+    }
 }
