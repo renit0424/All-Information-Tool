@@ -21,8 +21,6 @@ namespace All_Information_Tool
         {
             InitializeComponent();
             timer1.Start();
-            ktimer1.Start();
-            ktimer2.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,7 +28,7 @@ namespace All_Information_Tool
             timer1.Start();
             ////今日の天気予報の取得   
             string baseUrl = "http://weather.livedoor.com/forecast/webservice/json/v1";
-            //東京都のID
+
             string cityname = "320010";
 
             string url = $"{baseUrl}?city={cityname}";
@@ -123,105 +121,46 @@ namespace All_Information_Tool
                     this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
                     break;
             }
+            pictureBox3.ImageLocation = "https://mwsgvs.weathernews.jp/wxct/jpg/week8.jpg";
+            pictureBox5.ImageLocation = "https://mwsgvs.weathernews.jp/wxct/jpg/wxcto.jpg";
+            string URLText = "http://weather.livedoor.com/area/forecast/320010";
+            //docがHtmlのコードを文書として保持します
+            var doc = new HtmlAgilityPack.HtmlDocument();
+
+            //webを通してHtmlのコードを取得します
+            var web = new System.Net.WebClient();
+
+            //HtmlをUTF-8で取得します。
+            //特に指定しない場合、Htmlの文字コードによっては文字化けする場合があります
+            web.Encoding = Encoding.UTF8;
+
+            //web.DownloadString(URL)のURL先のHtmlを取得します。
+            //今回の場合はテキストボックスに書かれているURLを入れています
+            doc.LoadHtml(web.DownloadString(URLText));
+
+            //取得したHtmlコードからどの部分を取得するのかをXPath形式で指定します
+            //今回はブログの本文を指定しています
+            string Tani_XPath = @"/html[1]/body[1]/div[2]/div[2]/div[1]/div[7]/p[1]";
+
+            //指定したXPathをもとに文を取得しています
+            var Tani_Collection = doc.DocumentNode.SelectNodes(Tani_XPath);
+
+            string Tani_str = null;
+
+            //Tani_CollectionはListなので、一つずつ文を取り出しています
+            //文はInnerTextで取り出すことができます
+            foreach (var tmp in Tani_Collection)
+            {
+                Tani_str += tmp.InnerText;
+            }
+
+            //取得した文を表示します
+            textBox1.Text = Tani_str;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ////今日の天気予報の取得   
-            string baseUrl = "http://weather.livedoor.com/forecast/webservice/json/v1";
-            //東京都のID
-            string cityname = "320010";
 
-            string url = $"{baseUrl}?city={cityname}";
-            string json = new HttpClient().GetStringAsync(url).Result;
-            JObject jobj = JObject.Parse(json);
-
-            string todayweather = (string)((jobj["forecasts"][0]["telop"] as JValue).Value);//今日の天気の取得
-            label2.Text = (todayweather);
-            switch (todayweather)
-            {
-                case "晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota107_trans;
-                    break;
-                case "晴時々曇":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota143_trans;
-                    break;
-                case "晴れ時々雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota175_trans;
-                    break;
-                case "晴れ時々雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota211_trans;
-                    break;
-                case "晴のち曇":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota218_trans;
-                    break;
-                case "晴のち雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota250_trans;
-                    break;
-                case "晴のち雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota287_trans;
-                    break;
-                case "曇り":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota111_trans;
-                    break;
-                case "曇時々晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota147_trans;
-                    break;
-                case "曇時々雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota167_trans;
-                    break;
-                case "曇時々雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota191_trans;
-                    break;
-                case "曇のち晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota222_trans;
-                    break;
-                case "曇のち雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota242_trans;
-                    break;
-                case "曇のち雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota266_trans;
-                    break;
-                case "雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota130_trans;
-                    break;
-                case "雨時々晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-                case "雨時々雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota199_trans;
-                    break;
-                case "雨のち晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota254_trans;
-                    break;
-                case "雨のち曇":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota246_trans;
-                    break;
-                case "雨のち雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota274_trans;
-                    break;
-                case "雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-                case "雪時々晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-                case "雪時々雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-                case "雪のち晴れ":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota282_trans;
-                    break;
-                case "雪のち曇":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota270_trans;
-                    break;
-                case "雪のち雨":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-                case "暴風雪":
-                    this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
-                    break;
-            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -250,8 +189,8 @@ namespace All_Information_Tool
             }
 
             var jsonData = JsonConvert.DeserializeObject<Json>(json);
-            
-            switch(jsonData.Alertflg)
+
+            switch (jsonData.Alertflg)
             {
                 case "予報":
                     label3.Text = "緊急地震速報(予報)";
@@ -260,7 +199,7 @@ namespace All_Information_Tool
                     label3.Text = "緊急地震速報(警報)";
                     break;
             }
-            
+
             //第x報
             label4.Text = ($"第{jsonData.Report_num}報");
             //発生時刻
@@ -274,48 +213,6 @@ namespace All_Information_Tool
             //推定最大震度
             label9.Text = ($"推定震度 {jsonData.Calcintensity}");
 
-        }
-
-        private async void ktimer1_Tick(object sender, EventArgs e)
-        {
-            //地表加速度
-            try
-            {
-                DateTime dtNow = DateTime.Now;
-                DateTime time = DateTime.Now.AddSeconds(-3);
-                //-3＝PC時計から-3秒を取得する
-
-                string url = UrlGenerator.Generate(UrlType.RealTimeImg, time, RealTimeImgType.Pga);
-                Bitmap img = new Bitmap(new MemoryStream(await(new WebClient().DownloadDataTaskAsync(url))));
-
-                pictureBox3.ImageLocation = url;
-            }
-            catch
-            {
-                //失敗したときの処理
-                //例： MessageBox.Show("取得に失敗しました。");
-                //でも↑だと失敗した分出てくるからすごい数になりそう
-            }
-        }
-
-        private async void ktimer2_Tick(object sender, EventArgs e)
-        {
-            //地表震度
-            try
-            {
-                DateTime dtNow = DateTime.Now;
-                DateTime time = DateTime.Now.AddSeconds(-3);
-                //-3＝PC時計から-3秒を取得する
-
-                string url = UrlGenerator.Generate(UrlType.RealTimeImg, time, RealTimeImgType.Shindo);
-                Bitmap img = new Bitmap(new MemoryStream(await(new WebClient().DownloadDataTaskAsync(url))));
-
-                pictureBox4.ImageLocation = url;
-            }
-            catch
-            {
-                //取得error処理
-            }
         }
     }
 
@@ -438,197 +335,5 @@ namespace All_Information_Tool
             [JsonProperty("hash")]
             public string Hash { get; set; }
         }
-    }
-    //ここから↓を変えると動かないかも
-    public enum RealTimeImgType
-    {
-        /// <summary>
-        /// 震度
-        /// </summary>
-        Shindo,
-
-        /// <summary>
-        /// 最大加速度
-        /// </summary>
-        Pga,
-
-        /// <summary>
-        /// 最大速度
-        /// </summary>
-        Pgv,
-
-        /// <summary>
-        /// 最大変位
-        /// </summary>
-        Pgd,
-
-        /// <summary>
-        /// 速度応答0.125Hz
-        /// </summary>
-        Response_0_125Hz,
-
-        /// <summary>
-        /// 速度応答0.25Hz
-        /// </summary>
-        Response_0_25Hz,
-
-        /// <summary>
-        /// 速度応答0.5Hz
-        /// </summary>
-        Response_0_5Hz,
-
-        /// <summary>
-        /// 速度応答1Hz
-        /// </summary>
-        Response_1Hz,
-
-        /// <summary>
-        /// 速度応答2Hz
-        /// </summary>
-        Response_2Hz,
-
-        /// <summary>
-        /// 速度応答4Hz
-        /// </summary>
-        Response_4Hz,
-    }
-
-    /// <summary>
-    /// RealTimeImgTypeの拡張メソッド
-    /// </summary>
-    public static class RealTimeImgTimeExtensions
-    {
-        /// <summary>
-        /// URLに使用する文字列に変換する
-        /// </summary>
-        /// <param name="type">変換するRealTimeImgTypy</param>
-        /// <returns>変換された文字列</returns>
-        public static string ToUrlString(this RealTimeImgType type)
-        {
-            switch (type)
-            {
-                case RealTimeImgType.Shindo:
-                    return "jma";
-
-                case RealTimeImgType.Pga:
-                    return "acmap";
-
-                case RealTimeImgType.Pgv:
-                    return "vcmap";
-
-                case RealTimeImgType.Pgd:
-                    return "dcmap";
-
-                case RealTimeImgType.Response_0_125Hz:
-                    return "rsp0125";
-
-                case RealTimeImgType.Response_0_25Hz:
-                    return "rsp0250";
-
-                case RealTimeImgType.Response_0_5Hz:
-                    return "rsp0500";
-
-                case RealTimeImgType.Response_1Hz:
-                    return "rsp1000";
-
-                case RealTimeImgType.Response_2Hz:
-                    return "rsp2000";
-
-                case RealTimeImgType.Response_4Hz:
-                    return "rsp4000";
-            }
-            return null;
-        }
-    }
-
-    /// <summary>
-    /// 新強震モニタのURL生成器
-    /// </summary>
-    public static class UrlGenerator
-    {
-        /// <summary>
-        /// JsonEewのベースURL
-        /// <para>0:時間</para>
-        /// </summary>
-        public static string JsonEewBase = "http://www.kmoni.bosai.go.jp/new/webservice/hypo/eew/{0}.json";
-
-        /// <summary>
-        /// PsWaveImgのベースURL
-        /// <para>0:日付</para>
-        /// <para>1:時間</para>
-        /// </summary>
-        public static string PsWaveBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/PSWaveImg/eew/{0}/{1}.eew.gif";
-
-        /// <summary>
-        /// RealTimeImgのベースURL
-        /// <para>0:タイプ</para>
-        /// <para>1:地上(s)/地下(b)</para>
-        /// <para>2:日付</para>
-        /// <para>3:時間</para>
-        /// </summary>
-        public static string RealTimeBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/RealTimeImg/{0}_{1}/{2}/{3}.{0}_{1}.gif";
-
-        /// <summary>
-        /// 予想震度のベースURL
-        /// <para>0:日付</para>
-        /// <para>1:時間</para>
-        /// </summary>
-        public static string EstShindoBase = "http://www.kmoni.bosai.go.jp/new/data/map_img/EstShindoImg/eew/{0}/{1}.eew.gif";
-
-        /// <summary>
-        /// 与えられた値を使用してURLを生成します。
-        /// </summary>
-        /// <param name="urlType">生成するURLのタイプ</param>
-        /// <param name="datetime">生成するURLの時間</param>
-        /// <param name="realTimeShindoType">(UrlType=RealTimeImgの際に使用)取得するリアルタイム情報の種類</param>
-        /// <param name="isBerehole">(UrlType=RealTimeImgの際に使用)地中の情報を取得するかどうか</param>
-        /// <returns></returns>
-        public static string Generate(UrlType urlType, DateTime datetime,
-            RealTimeImgType realTimeShindoType = RealTimeImgType.Shindo, bool isBerehole = false)
-        {
-            switch (urlType)
-            {
-                case UrlType.RealTimeImg:
-                    return string.Format(RealTimeBase, realTimeShindoType.ToUrlString(), isBerehole ? "b" : "s", datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
-
-                case UrlType.RestShindo:
-                    return string.Format(EstShindoBase, datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
-
-                case UrlType.PSWave:
-                    return string.Format(PsWaveBase, datetime.ToString("yyyyMMdd"), datetime.ToString("yyyyMMddHHmmss"));
-
-                case UrlType.EewJson:
-                    return string.Format(JsonEewBase, datetime.ToString("yyyyMMddHHmmss"));
-            }
-            return null;
-        }
-    }
-
-
-    /// <summary>
-    /// 生成するURLの種類
-    /// </summary>
-    public enum UrlType
-    {
-        /// <summary>
-        /// リアルタイム情報
-        /// <para>震度、加速度など</para>
-        /// </summary>
-        RealTimeImg = 0,
-
-        /// <summary>
-        /// 到達予想震度
-        /// </summary>
-        RestShindo,
-
-        /// <summary>
-        /// P波、S波到達予想円
-        /// </summary>
-        PSWave,
-
-        /// <summary>
-        /// 緊急地震速報のJson
-        /// </summary>
-        EewJson,
     }
 }

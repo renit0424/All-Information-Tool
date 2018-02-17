@@ -10,3 +10,6 @@ C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-I
 C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.csproj.CoreCompileInputs.cache
 C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.exe
 C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\obj\Debug\All-Information-Tool.pdb
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\HtmlAgilityPack.dll
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\れん\Documents\GitHub\All-Information-Tool\All-Information-Tool\All-Information-Tool\bin\Debug\HtmlAgilityPack.xml
