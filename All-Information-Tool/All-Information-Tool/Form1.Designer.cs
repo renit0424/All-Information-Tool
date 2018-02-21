@@ -50,9 +50,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(243, 243);
+            this.groupBox1.Size = new System.Drawing.Size(243, 270);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "天気";
@@ -93,7 +93,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(231, 100);
+            this.textBox1.Size = new System.Drawing.Size(231, 124);
             this.textBox1.TabIndex = 3;
             // 
             // pictureBox1
@@ -144,7 +144,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(298, 289);
+            this.groupBox2.Location = new System.Drawing.Point(304, 288);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(274, 166);
             this.groupBox2.TabIndex = 3;
@@ -235,7 +235,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.pictureBox2);
-            this.groupBox4.Location = new System.Drawing.Point(12, 271);
+            this.groupBox4.Location = new System.Drawing.Point(18, 288);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(280, 280);
             this.groupBox4.TabIndex = 7;
@@ -265,14 +265,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "天気図";
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 12);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "実況天気図";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(287, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 12);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "9時の予想天気図";
             // 
             // pictureBox3
             // 
@@ -284,14 +284,14 @@
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
-            // label11
+            // label10
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(287, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 12);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "9時の予想天気図";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "実況天気図";
             // 
             // Form1
             // 

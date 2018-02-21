@@ -63,7 +63,7 @@ namespace All_Information_Tool
                 case "曇り":
                     this.pictureBox1.Image = Properties.Resources._010701sonota111_trans;
                     break;
-                case "曇時々晴れ":
+                case "曇時々晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota147_trans;
                     break;
                 case "曇時々雨":
@@ -72,7 +72,7 @@ namespace All_Information_Tool
                 case "曇時々雪":
                     this.pictureBox1.Image = Properties.Resources._010701sonota191_trans;
                     break;
-                case "曇のち晴れ":
+                case "曇のち晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota222_trans;
                     break;
                 case "曇のち雨":
@@ -84,13 +84,13 @@ namespace All_Information_Tool
                 case "雨":
                     this.pictureBox1.Image = Properties.Resources._010701sonota130_trans;
                     break;
-                case "雨時々晴れ":
+                case "雨時々晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
                     break;
                 case "雨時々雪":
                     this.pictureBox1.Image = Properties.Resources._010701sonota199_trans;
                     break;
-                case "雨のち晴れ":
+                case "雨のち晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota254_trans;
                     break;
                 case "雨のち曇":
@@ -102,13 +102,13 @@ namespace All_Information_Tool
                 case "雪":
                     this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
                     break;
-                case "雪時々晴れ":
+                case "雪時々晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
                     break;
                 case "雪時々雨":
                     this.pictureBox1.Image = Properties.Resources._010701sonota179_trans;
                     break;
-                case "雪のち晴れ":
+                case "雪のち晴":
                     this.pictureBox1.Image = Properties.Resources._010701sonota282_trans;
                     break;
                 case "雪のち曇":
